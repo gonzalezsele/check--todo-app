@@ -5,90 +5,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check! | Organízate fácil y rápido</title>
-    <!--Font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Todo app</title>
+    <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--css-->
     <link rel="stylesheet" href="./css/style.css">
-    <!--    <link rel="stylesheet" href="./js/main.js">
-        <link rel="stylesheet" href="./js/controlador.js">
--->
-
 </head>
 
 <body>
 
+    <section class="vh-100" style="background-color: #65a9b6;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
 
-    <div class="wrapper">
-
-        <!--header-->
-        <header>
-            <h1 class="logo">Ch<span>e</span>ck!</h1>
-        </header>
-
+      
+                <div class="card">
+                    <div class="card-body p-5">
+      
+                    <h6 class="mb-3">Check! <span>✦</span> Organízate fácil y rápido</h6>
+      
         <!--añadir tarea-->
-        <div class="task-input">
-            <input type="text" placeholder="Introduce tu tarea" name="content" id="content" />
-            <!--filtro por tarea-->
-            <select class="select-task">
-                <option value="">Seleccionar tarea</option>
-                <option value="urgente">Urgente</option>
-                <option value="diaria">Diaria</option>
-                <option value="mensual">Mensual</option>
-            </select>
-            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="¿Qué necesitas hacer hoy?">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Selecciona una prioridad
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" value="urgente">Urgente</a></li>
+            <li><a class="dropdown-item" value="diaria">Diaria</a></li>
+            <li><a class="dropdown-item" value="mensual">Mensual</a></li>
+            </ul>
+            <button type="button" class="btn btn-outline-secondary">Añadir</button>
         </div>
 
         <!--buscador semántico-->
-        <div class="task-select">
-            <select class="filter-task">
-                <option value="">Seleccionar tarea</option>
-                <option value="urgente">Urgente</option>
-                <option value="diaria">Diaria</option>
-                <option value="mensual">mensual</option>
-            </select>
-            <input type="search" name="buscartarea" placeholder="Encuentra tu tarea">
-            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Quien busca encuentra">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Selecciona una prioridad
+              </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" value="urgente">Urgente</a></li>
+              <li><a class="dropdown-item" value="diaria">Diaria</a></li>
+              <li><a class="dropdown-item" value="mensual">Mensual</a></li>
+            </ul>
+            <button type="button" class="btn btn-outline-secondary">Buscar</button>
         </div>
-
-        <!--historial
-        <div class="controls">
-            <div class="filters">
-                <span id="all">Todas</span>
-                <span id="pending">Pendientes</span>
-                <span id="completed">Finalizadas</span>
-            </div>
-            <button class="clear-btn">Clear all</button>
-        </div>
-        -->
-
+      
         <!--caja de tareas-->
-        <div class="task-box">
-            <div class="task">
-                <input type="checkbox" id="checkbox">
-                <p>Estudiar JavaScript</p>
-                <div class="item-btn">
-                    <i class="fa-regular fa-trash-can"></i>
-                </div>
-            </div>
+              <ul class="list-group mb-0">
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                  <div class="d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                    Estudiar JavaScript
+                  </div>
+                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                    <i class="bi bi-trash text-primary"></i>
+                  </a>
+                </li>
+                <li
+                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                  <div class="d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
+                    <s>Dormir</s>
+                  </div>
+                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                    <i class="bi bi-trash text-primary"></i>
+                  </a>
+                </li>
+                <li
+                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                  <div class="d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
+                    Salir a cenar
+                  </div>
+                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
+                    <i class="bi bi-trash text-primary"></i>
+                  </a>
+                </li>
+              </ul>      
 
-            <div class="task completed">
-                <input type="checkbox" id="checkbox">
-                <p>Salir a comer</p>
-                <div class="item-btn">
-                    <i class="fa-regular fa-trash-can"></i>
                 </div>
+              </div>
+      
             </div>
-
+          </div>
         </div>
+      </section>
 
-        <!--caja de tareas-->
-
-    </div>
-
-    <script src="/js/vista.js"></script>
+    <!--javascript-->
+    <script src="./js/view.js"></script>
+    <!--bootstrap javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
 </html>
