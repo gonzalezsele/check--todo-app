@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- css-->
+    <link rel="stylesheet" href="style.css">
+    <title>Check! ✦ Organízate fácil y rápido</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center text-light my-4">
+            <h1 class="mb-4">Check! ✦ To Do</h1>
+            
+            <form action="" class="search">
+                <i class="fa fa-search icon"></i>
+                <input type="text" class="form-control input-field m-auto">
+            </form>
+        </header>
+
+        <form  class="add text-center my-4">
+            <label class="text-light">
+                Introduce una tarea...
+            </label>
+            <input type="text" class="form-control m-auto" name="add"/>
+        </form>
+
+        <ul class="list-group todos mx-auto text-light">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Estudiar Javascript</span>
+                <i class="fa fa-trash-o delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Dormir 8 horas</span>
+                <i class="fa fa-trash-o delete"></i>
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Leer un libro</span>
+                <i class="fa fa-trash-o delete"></i>
+
+            </li>
+        </ul>
+
+    </div>
+    <script src="view.js"></script>
+</body>
+
+</html>
